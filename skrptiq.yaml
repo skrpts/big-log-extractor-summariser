@@ -1,0 +1,59 @@
+# --- Identity ---
+id: "4486200e-fc33-48f4-8fd5-c96b22140ebd"
+name: "big-log-extractor-summariser"
+display_name: "Big-Log Extractor & Summariser"
+description: "Extracts the signal from a large log deterministically — pull matching lines, dedupe, count — then has a model summarise only the small, unique result, cutting tokens dramatically."
+version: "1.0.1"
+engine: ">=0.1.0"
+
+# --- Attribution ---
+author:
+  name: "skrptiq"
+  url: "https://hub.skrptiq.ai"
+
+licence: "MIT"
+repository: "https://github.com/skrpts/big-log-extractor-summariser"
+
+# --- Discovery (Hub) ---
+category: "developer"
+tags:
+  - "logs"
+  - "builtin"
+  - "observability"
+
+# --- Dependencies ---
+dependencies:
+  - id: "fcab9536-a13e-49c9-b0c3-bb3097682e69"
+    name: "llm-service"
+    version: 1.0.2
+    checksum: "sha256:292d811ee78ed4f4f18c20299115bb4df01150c3230feca30177a76b7f272cc6"
+
+# --- Requirements ---
+requires:
+  services:
+    - "llm-service"
+
+# --- Contents ---
+contents:
+  skills: 1
+  prompts: 1
+  workflows: 1
+  services: 0
+  sources: 0
+  documents: 0
+  assets: 0
+  total: 3
+
+security:
+  status: "pass"
+  scanned_at: "2026-07-12T13:34:42.871Z"
+  scanner_version: "3.3.0"
+  syntactic: "pass"
+  structural: "pass"
+  detected:
+    services: ["llm-service"]
+    permissions: []
+    data_handling: []
+  undeclared: []
+  warnings: []
+  report_url: "https://hub.skrptiq.ai/skrpts/big-log-extractor-summariser/security"
